@@ -1,0 +1,63 @@
+@import "../../styles/variables";
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center; // center children on cross-axis (horizontal in column)
+  justify-content: center;
+  min-height: calc(100vh - 80px - 80px); // Adjust as per Navbar/Footer height
+  padding: 2rem;
+  gap: 2rem;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    // align-items: center; // this is key: vertically center in row layout
+  }
+}
+
+.content {
+  flex: 1;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .cta {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    background-color: $primary-color;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+
+    &:hover {
+      background-color: darken($primary-color, 10%);
+    }
+  }
+}
+
+.imageWrapper {
+  flex: 1;
+  position: relative;
+  width: 100%;
+  min-height: 250px; // 👈 ensures image shows on mobile
+  height: 100%;
+
+  @media (max-width: 768px) {
+    min-height: 100%; // or auto if you want it to match content
+  }
+
+  border-radius: 1rem;
+  overflow: hidden;
+}
