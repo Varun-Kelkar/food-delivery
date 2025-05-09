@@ -1,7 +1,7 @@
 "use client";
-
 import Image from "next/image";
 import styles from "./hero.module.scss";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -12,7 +12,9 @@ export default function Hero() {
           Browse local restaurants, order your favorites, and enjoy fast home
           delivery.
         </p>
-        <button className={styles.cta}>Explore Restaurants</button>
+        <Link href="/restaurants" className={styles.link}>
+          <button className={styles.cta}>Explore Restaurants</button>
+        </Link>
       </div>
 
       <div className={styles.imageWrapper}>

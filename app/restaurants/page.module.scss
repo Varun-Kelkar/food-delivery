@@ -1,0 +1,14 @@
+
+.pageHeader {
+  margin-bottom: 1rem;
+  padding: 2rem;
+}
+
+.gridSection{
+    padding: 2rem;
+}
+.grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+}
